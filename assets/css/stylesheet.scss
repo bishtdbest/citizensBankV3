@@ -1,0 +1,521 @@
+
+
+/*# sourceMappingURL=stylesheet.scss.map */
+
+// variable
+$base-color: #00945f;
+$font-color: #888888;
+$link-color: #759b24; 
+
+
+// Global resets and utility styles
+*,*::before,*::after {  box-sizing: border-box;}
+
+* { margin: 0;}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  color: $font-color;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,button,textarea,select {
+  font: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-wrap: pretty;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $base-color;
+  font-weight: normal;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 26px;
+  position: relative;  
+  padding-bottom: 14px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 2px;
+    background-color: $base-color;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+#root,#__next { isolation: isolate;}
+
+// Links
+a { text-decoration: none; color: $link-color;}
+
+.btnLink {
+  display: inline-block;
+  background-color: #e97300;
+  font-size: 21px;
+  color: white;
+  padding: 4px 20px;
+  &:hover{background-color: #000000;}
+}
+
+.textLink {
+  position: relative;
+  color: $link-color;
+  display: inline-block;
+  margin-right: 10px;
+
+  &::after {
+    content: "";
+    border: solid 1px $link-color;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &:hover{text-decoration: underline;}
+}
+
+.wrapper{max-width: 320px; margin: 0 auto;}
+
+.container {
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 0 auto;
+    }
+
+
+// Header
+.header {
+  padding: 8px 0 11px;
+  text-align: center;
+
+  .logo {
+    display: inline-block;
+    max-width: 174px;
+  }
+}
+
+// Middle Container
+.middleContainer {
+  padding-bottom: 39px;
+}
+
+// Banner
+.bannerWrapper {
+  margin-bottom: 37px;
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bannerImg {
+    width: 100%;
+    display: block;
+    
+    min-height: 201px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .bannerOverlay {
+    position: absolute;
+    z-index: 1;
+    left: 53%;
+    top: 0;
+    transform: skew(-14deg);
+    height: 100%;
+    width: 55%;
+    background: #005944;
+    opacity: 80%;
+    display: none;
+  }
+}
+
+// Investment
+.investmentWrapper {
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 27px;
+
+  p {
+    text-align: left;
+    margin-bottom: 41px;
+    line-height: 1.95;
+  }
+}
+
+// Advantage
+.advantageWrapper {
+  padding-top: 20px;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+// Advantage
+.advantageRow {
+    display: block;
+    padding-top: 13px;
+    position: relative;
+
+  &:last-child {
+    padding-top: 0;
+    .advantageItem {
+      &:first-child { 
+        padding-bottom: 13px;
+        margin-bottom: 18px;
+      }      
+      &:last-child { 
+        border-bottom: 0 none;
+        margin-bottom: 12px;
+       }
+    }
+  }
+}
+
+.advantageItem {
+    width: 100%;
+    margin-bottom: 16px;
+    padding-bottom: 22px;
+    border-bottom: solid 1px #c2c2c2;
+
+  &:first-child {
+    padding-right: 0;
+  }
+
+  &:last-child {
+    padding-left: 0;
+    padding-bottom: 18px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 15.5px;
+    line-height: 2;
+  }
+}
+
+// Loan Section
+.loanWrapper {
+  margin-bottom: 30px;
+
+  .loanHeading {
+    background-color: #00945f;
+
+    h2 {
+      color: white;
+      padding: 16px 0 10px;
+      margin: 0;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.5;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .loanContent {
+    padding: 15px 7px 8px;
+    background-color: #ebf7f5;
+    text-align: left;
+
+    p {
+    font-size: 15.5px;
+    line-height: 2;
+    margin: 0;
+    }
+  }
+}
+
+// Testimonial
+.testimonialList {
+  display: block;
+
+  .testimonialItem {
+    width: 100%;
+    margin-bottom: 26px;
+    text-align: center;
+
+    .clientImg{
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 8px;
+    }
+
+    .testimonial {
+      border: solid 1px transparent;
+      max-width: 65%;
+      display: block;
+      margin: 0 auto 8px;
+      position: relative; 
+      &::before{
+        content: "";
+        background: url(../images/quoteIcon.webp) no-repeat;
+        width: 68px;
+        height: 57px;
+        position: absolute;
+        left: -20PX;
+        top: 0;
+        z-index: 1;
+      }
+      p{ position: relative;
+        z-index: 2;
+        font-size: 15px;
+        line-height: 1.9;
+        font-style: italic;
+        color: #666666;
+        margin-bottom: 0;
+      }
+    }
+
+    .clientDetails {
+      span {
+        color: $base-color;
+        display: block;
+        font-size: 15px;
+        line-height: 2;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  border-top: solid 1px $base-color;
+  padding: 26px 0;
+
+  .SocialLinkslist {
+    display: flex;
+    margin-bottom: 24px;
+
+    > a {
+      margin-right: 8px;
+    }
+  }
+
+  p {
+    font-size: 11px;
+    line-height: 1.2;
+    color: $font-color;
+
+    a {
+      text-decoration: underline;
+      color: $font-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .footerLinks{color: #000000; 
+    font-size: 11px;
+    font-weight: normal;
+
+    a {
+        color: #000000;
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+    }
+}
+
+// Responsive styles
+@media (min-width: 768px) {
+    .wrapper { max-width: 1280px;}
+    .container {
+        padding-left: 38px;
+        padding-right: 38px;
+        }
+
+    h2 {
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .middleContainer {
+        padding-bottom: 129px;
+    }
+    // Header
+    .header {
+        padding: 64px 0 39px;
+        text-align: left;
+
+        .logo {
+        max-width: 100%;
+        }
+    }
+
+    // Banner
+    .bannerWrapper {
+        .bannerOverlay {
+        display: block;
+        }
+    }
+
+    // Investment
+    .investmentWrapper {
+        padding-top: 20px;
+        margin-bottom: 18px;
+
+        p {
+        line-height: 2;
+        margin-bottom: 37px;
+        }
+    }
+
+    // Advantage
+
+    .advantageRow {
+        padding-top: 20px;
+        display: flex;
+        margin-bottom: 85px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 80%;
+          background: #c0c0c0;
+          left: 49.5%;
+          top: 27px;
+        }
+
+        &:last-child {
+        padding-top: 20px;
+        margin-bottom: 46px;
+          .advantageItem {
+            &:first-child { 
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+    }
+
+    .advantageItem {
+        width: 49.5%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0 none;
+
+        &:first-child {
+        padding-right: 36px;
+        }
+
+        &:last-child {
+        padding-left: 42px;
+        padding-bottom: 0;
+        }
+
+        p {
+        font-size: 15px;
+        line-height: 2;
+        // margin-bottom: 20px;
+        }
+        a.textLink{margin-top: 5px;}
+    }
+
+  // Loan Section
+  .loanWrapper {
+        margin-bottom: 61px;
+
+        .loanHeading h2 {
+            line-height: 1.6;
+            br{display: none;}
+        }
+
+        .loanContent {
+            padding: 23px 64px 30px;
+                p {
+                font-size: 16px;
+                line-height: 1.9;
+            }
+        }
+    }
+
+    .testimonialWrapper { 
+        .testimonialList {
+            display: flex;
+
+            .testimonialItem {
+                width: 27%;
+                margin-bottom: 0px;
+                
+
+                .testimonial {
+                  max-width: 55%;
+                  &::before{left: -6px;}
+                }
+              &.centerItem {
+                  width: 46%;
+                  .testimonial {
+                    max-width: 70%;
+                    &::before{left: 10px;}
+                  }
+              }
+            }
+        }
+    }
+
+  .footer {
+    padding: 37px 0;
+    p{margin-bottom: 23px;}
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.8px) {
+  .testimonialWrapper {
+    .testimonialList {
+      .testimonialItem {
+        width: 30%;
+        &.centerItem {
+            width: 40%;
+          }
+          .testimonial {
+            max-width: 80%;
+          }
+      }
+    }
+  }
+
+}
